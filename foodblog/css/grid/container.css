@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Product Display */
+.product-page {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-gallery {
+    max-width: 50%;
+}
+
+.product-gallery img {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.image-thumbnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.image-thumbnails img {
+    width: 30%;
+    cursor: pointer;
+}
+
+.product-info {
+    max-width: 40%;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 22px;
+    color: green;
+}
+
+.description {
+    margin: 15px 0;
+}
+
+.specifications {
+    list-style-type: none;
+    padding: 0;
+}
+
+.specifications li {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Product Filtering */
+.filter-section {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+}
+
+.filter-section label {
+    margin-right: 10px;
+}
+
+.filter-section select {
+    padding: 5px;
+}
+
+/* Shopping Cart */
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    background-color: #f8f8f8;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.cart-sidebar.open {
+    transform: translateX(0);
+}
+
+.cart-items {
+    margin: 20px 0;
+}
+
+/* Customer Reviews */
+.reviews-section {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.reviews-section h2 {
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-gallery, .product-info {
+        max-width: 100%;
+    }
+
+    .cart-sidebar {
+        width: 100%;
+        height: auto;
+    }
+}
